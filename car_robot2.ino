@@ -26,24 +26,24 @@ void setup() {
 
 void rotatemotor(int rightspeed,int leftspeed)
 {
-  if(rightspeed<0)
+  if(rightspeed<0)//FOR Backward motion , both of the right tyres will move in backward when right pin 2 is high
   {
     digitalWrite(rightpin2,HIGH);
     digitalWrite(rightpin1,LOW);
   }
-  else if(rightspeed>=0)
+  else if(rightspeed>=0)//FOR Forward motion ,both of the right tyres will move in forward when right pin 1 is high
   {
     digitalWrite(rightpin1,HIGH);
     digitalWrite(rightpin2,LOW);
   }
 
-  if(leftspeed<0)
+  if(leftspeed<0)//FOR Backward motion , both of the left tyres will move in backward when left pin 1 is high
   {
     digitalWrite(leftpin1,HIGH);
     digitalWrite(leftpin2,LOW);
   }
   
-  else if(leftspeed>=0)
+  else if(leftspeed>=0)//FOR Forward motion,both of the left tyres will move in forward when right pin 1 is high
   {
     digitalWrite(leftpin2,HIGH);
     digitalWrite(leftpin1,LOW);
@@ -81,6 +81,7 @@ void loop()
 
 
 }
+//FOR making the car move 2s forward , 1s stop and then 2s backwards and so on....
 //   void loop() {
 //FORWARD MOTION
 //   analogWrite(enableRightmotor,200);
